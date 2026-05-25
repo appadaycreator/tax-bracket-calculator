@@ -27,7 +27,7 @@
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"所得税率・税額計算ツール","description":"年収・控除額から所得税・住民税の実効税率と年税額を計算。手取り額の目安も表示。登録不要・完全無料でご利用いただけます。","url":"https://appadaycreator.com/tax-bracket-calculator/","applicationCategory":"UtilityApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Organization","name":"AppADayCreator","url":"https://appadaycreator.com/"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"所得税率・税額計算ツールは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料でご利用いただけます。登録・ログイン不要ですぐに使えます。"}},{"@type":"Question","name":"入力したデータはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"入力データはお使いのデバイス内にのみ保存されます。外部サーバーへの送信は行いません。"}},{"@type":"Question","name":"所得税率・税額計算ツールの計算・診断結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"本ツールの結果はあくまで参考情報です。重要な判断の際は専門家にご相談ください。"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "所得税率・税額計算ツールは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、完全無料でご利用いただけます。登録・ログインも不要です。"}}, {"@type": "Question", "name": "スマートフォンでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、スマートフォン・タブレット・PCすべてのデバイスからご利用いただけます。"}}, {"@type": "Question", "name": "入力したデータは保存されますか？", "acceptedAnswer": {"@type": "Answer", "text": "入力データはブラウザ内のみで処理され、サーバーへの送信・保存は行いません。プライバシーは保護されます。"}}, {"@type": "Question", "name": "計算結果は保証されますか？", "acceptedAnswer": {"@type": "Answer", "text": "計算結果はあくまで参考値です。実際の数値は状況により異なります。重要な判断の際は専門家にご確認ください。"}}, {"@type": "Question", "name": "小数点以下の入力は可能ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、小数点を含む数値も入力できます。"}}]}</script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%); min-height: 100vh; color: #333; line-height: 1.6; }
@@ -50,10 +50,8 @@
         /* ── サービス固有CSS ── */
 
     </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "所得税率・税額計算ツール", "description": "所得税率・税額計算ツールの使用方法", "step": [{"@type": "HowToStep", "position": 1, "name": "ステップ1", "text": "あなたの状況や好みについての質問に答えてください"}, {"@type": "HowToStep", "position": 2, "name": "ステップ2", "text": "さらに詳しい情報を入力します"}, {"@type": "HowToStep", "position": 3, "name": "ステップ3", "text": "サービスがあなたに最適な選択肢を分析します"}, {"@type": "HowToStep", "position": 4, "name": "ステップ4", "text": "診断結果が表示されます"}, {"@type": "HowToStep", "position": 5, "name": "ステップ5", "text": "推奨事項に従って行動します"}]}</script>
 </head>
-<body><a href="#main" class="sr-only">本文へスキップ</a>
-
+<body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="site-header">
@@ -72,18 +70,8 @@
           <input type="number" id="income" placeholder="500" min="0" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;margin-bottom:8px;">
           <label style="margin-top:8px;">各種控除額（万円）※iDeCo・生命保険料控除など</label>
           <input type="number" id="deduction" placeholder="0" min="0" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;">
-          <button class="btn" style="margin-top:20px;" onclick="calculate()" aria-label="税額を計算する">税額を計算する</button>
-          
-    <div class="card p-6 mb-4">
-      <h2 class="font-bold text-gray-800 mb-3">💡 使用例</h2>
-      <ul class="text-sm text-gray-700 space-y-2">
-        <li>• 複数の選択肢から最適なものを選びたい場合</li>
-        <li>• 意思決定に客観的な基準が欲しい場合</li>
-        <li>• プロフェッショナルなアドバイスが必要な場合</li>
-        <li>• 予算やニーズに合わせた提案を受けたい場合</li>
-      </ul>
-    </div>
-    <div class="result" id="result" style="margin-top:16px;">
+          <button class="btn" style="margin-top:20px;" onclick="calculate()">税額を計算する</button>
+          <div class="result" id="result" style="margin-top:16px;">
             <div class="card">
               <div id="output" style="font-size:1.3rem;font-weight:700;color:#6366F1;padding:8px 0;"></div>
               <p id="detail" style="color:#444;font-size:14px;margin-top:8px;line-height:1.8;white-space:pre-line;"></p>
@@ -104,19 +92,57 @@
         <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-        <!-- 使い方セクション（B2: 使い方3ステップ）-->
+        <!-- 使い方セクション -->
         <div class="card" style="margin-top:8px;background:#f8fafc;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
-            <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.8;">
-                <li><strong>入力</strong>：画面の入力フォームに必要な情報を入力してください</li>
-                <li><strong>計算・診断</strong>：ボタンをクリックすると即座に結果が表示されます</li>
-                <li><strong>活用</strong>：結果を参考に、次のアクションを検討してください</li>
+            <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
+                <li>入力フォームに必要な数値・条件を入力する</li>
+                <li>「計算する」ボタンをクリックする</li>
+                <li>計算結果と詳細情報を確認する</li>
+                <li>条件を変えて再計算・比較してみる</li>
+                <li>結果をメモまたはSNSでシェアする</li>
             </ol>
         </div>
 
-        <!-- 注意点（B5: 限界・注意点）-->
+        <!-- FAQ セクション -->
+        <div class="card" style="margin-top:8px;">
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:#374151;">❓ よくある質問</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 所得税率・税額計算ツールは無料で使えますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、完全無料でご利用いただけます。登録・ログインも不要です。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: スマートフォンでも使えますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、スマートフォン・タブレット・PCすべてのデバイスからご利用いただけます。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 入力したデータは保存されますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 入力データはブラウザ内のみで処理され、サーバーへの送信・保存は行いません。プライバシーは保護されます。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 計算結果は保証されますか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 計算結果はあくまで参考値です。実際の数値は状況により異なります。重要な判断の際は専門家にご確認ください。</p>
+            </div>
+            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
+              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 小数点以下の入力は可能ですか？</p>
+              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、小数点を含む数値も入力できます。</p>
+            </div>
+            </div>
+        </div>
+
+        <!-- SNSシェアCTA -->
+        <div class="card" style="margin-top:8px;text-align:center;background:linear-gradient(135deg,#E0E7FF,#F0F4FF);">
+            <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">📣 友人・家族にシェアする</p>
+            <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                <a href="https://twitter.com/intent/tweet?text=%E6%89%80%E5%BE%97%E7%A8%8E%E7%8E%87%E3%83%BB%E7%A8%8E%E9%A1%8D%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB%20%23無料ツール&url=https%3A%2F%2Fappadaycreator.com%2Ftax-bracket-calculator%2F" target="_blank" rel="noopener" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;">𝕏 シェア</a>
+                <a href="https://line.me/R/msg/text/?%E6%89%80%E5%BE%97%E7%A8%8E%E7%8E%87%E3%83%BB%E7%A8%8E%E9%A1%8D%E8%A8%88%E7%AE%97%E3%83%84%E3%83%BC%E3%83%AB%0Ahttps%3A%2F%2Fappadaycreator.com%2Ftax-bracket-calculator%2F" target="_blank" rel="noopener" style="background:#00B900;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;">LINE</a>
+            </div>
+        </div>
+
+        <!-- 免責事項 -->
         <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;margin:8px 0;font-size:12px;color:#92400e;">
-            <strong>⚠️ ご利用上の注意</strong>：本ツールの計算・診断結果はあくまで参考情報です。医療・法律・投資等の専門的判断が必要な場合は、必ず資格を持つ専門家にご相談ください。
+            <strong>⚠️ 免責事項</strong>：本ツールの計算・診断結果はあくまで参考情報です。医療・法律・税務・投資等の専門的判断が必要な場合は、必ず資格を持つ専門家にご相談ください。本サービスの利用により生じた損害について、当サービスは一切の責任を負いません。
         </div>
     </main>
 
@@ -131,22 +157,22 @@
 
     <script>
     // ★ここだけ実装★
-    const CFG = {{
+    const CFG = {
       inputs: ['income','deduction'],
       error: '年収を入力してください',
-    }};
-    function calcLogic(vals) {{
+    };
+    function calcLogic(vals) {
       const [income, deduction] = vals;
       const incomeYen = income * 10000;
       const deductionYen = deduction * 10000;
       // 給与所得控除
       let salaryDeduction;
-      if (income <= 162.5) {{ salaryDeduction = 550000; }}
-      else if (income <= 180) {{ salaryDeduction = incomeYen * 0.4 - 100000; }}
-      else if (income <= 360) {{ salaryDeduction = incomeYen * 0.3 + 80000; }}
-      else if (income <= 660) {{ salaryDeduction = incomeYen * 0.2 + 440000; }}
-      else if (income <= 850) {{ salaryDeduction = incomeYen * 0.1 + 1100000; }}
-      else {{ salaryDeduction = 1950000; }}
+      if (income <= 162.5) { salaryDeduction = 550000; }
+      else if (income <= 180) { salaryDeduction = incomeYen * 0.4 - 100000; }
+      else if (income <= 360) { salaryDeduction = incomeYen * 0.3 + 80000; }
+      else if (income <= 660) { salaryDeduction = incomeYen * 0.2 + 440000; }
+      else if (income <= 850) { salaryDeduction = incomeYen * 0.1 + 1100000; }
+      else { salaryDeduction = 1950000; }
       const basicDeduction = 480000; // 基礎控除48万
       const taxable = Math.max(0, incomeYen - salaryDeduction - basicDeduction - deductionYen);
       // 所得税計算（超過累進課税）
@@ -160,12 +186,12 @@
         [Infinity, 0.45, 4796000],
       ];
       let incomeTax = 0;
-      for (const [limit, rate, deduct] of brackets) {{
-        if (taxable <= limit) {{
+      for (const [limit, rate, deduct] of brackets) {
+        if (taxable <= limit) {
           incomeTax = Math.floor(taxable * rate - deduct);
           break;
-        }}
-      }}
+        }
+      }
       incomeTax = Math.max(0, incomeTax);
       // 復興特別所得税 2.1%
       const surtax = Math.floor(incomeTax * 0.021);
@@ -176,34 +202,34 @@
       const takeHome = Math.round(incomeYen - totalTax);
       const effectiveRate = incomeYen > 0 ? (totalTax / incomeYen * 100).toFixed(1) : 0;
       const fmt = v => Math.round(v).toLocaleString();
-      const result = `合計税額: ${{fmt(totalTax)}}円（実効税率 ${{effectiveRate}}%）`;
+      const result = `合計税額: ${fmt(totalTax)}円（実効税率 ${effectiveRate}%）`;
       const detail = [
-        `【年収】${{fmt(incomeYen)}}円`,
-        `【給与所得控除】${{fmt(salaryDeduction)}}円`,
-        `【基礎控除】${{fmt(basicDeduction)}}円`,
-        `【追加控除】${{fmt(deductionYen)}}円`,
-        `【課税所得】${{fmt(taxable)}}円`,
-        `【所得税（復興税込）】${{fmt(totalIncomeTax)}}円`,
-        `【住民税】${{fmt(residentTax)}}円`,
-        `【合計税額】${{fmt(totalTax)}}円`,
-        `【実効税率】${{effectiveRate}}%`,
-        `【手取り目安】${{fmt(takeHome)}}円`,
+        `【年収】${fmt(incomeYen)}円`,
+        `【給与所得控除】${fmt(salaryDeduction)}円`,
+        `【基礎控除】${fmt(basicDeduction)}円`,
+        `【追加控除】${fmt(deductionYen)}円`,
+        `【課税所得】${fmt(taxable)}円`,
+        `【所得税（復興税込）】${fmt(totalIncomeTax)}円`,
+        `【住民税】${fmt(residentTax)}円`,
+        `【合計税額】${fmt(totalTax)}円`,
+        `【実効税率】${effectiveRate}%`,
+        `【手取り目安】${fmt(takeHome)}円`,
       ].join('
     ');
-      return {{ result, detail }};
-    }}
+      return { result, detail };
+    }
     // ★以下変更不要★
-    document.addEventListener('DOMContentLoaded',()=>{{
-      CFG.inputs.forEach(id=>{{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{{ if(e.key==='Enter') calculate(); }}); }});
-    }});
-    function calculate(){{
+    document.addEventListener('DOMContentLoaded',()=>{
+      CFG.inputs.forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{ if(e.key==='Enter') calculate(); }); });
+    });
+    function calculate(){
       const vals=CFG.inputs.map(id=>parseFloat(document.getElementById(id)?.value)||0);
-      if(!vals[0]){{ alert(CFG.error); return; }}
-      const {{result,detail}}=calcLogic(vals);
+      if(!vals[0]){ alert(CFG.error); return; }
+      const {result,detail}=calcLogic(vals);
       document.getElementById('output').textContent=typeof result==='number'?result.toLocaleString():result;
       const d=document.getElementById('detail'); if(d) d.textContent=detail||'';
       document.getElementById('result').classList.add('show');
-    }}
+    }
     </script>
 </body>
 </html>
