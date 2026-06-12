@@ -1,0 +1,73 @@
+Fetch this design file, read its readme, and implement the relevant aspects of the design. https://api.anthropic.com/v1/design/h/lFpBu_wapGnaJvocv4nk7g?open_file=index.html
+Implement: ## 指示
+ClaudeDesignによって作成されたデザインを効果的に反映してほしい。
+
+**必ず最初に以下のデザイン参照画像を Read tool で読み込み、配色・レイアウト・フォント・セクション構成を視覚的に把握してから実装を開始してください:**
+- （LPページ全体デザイン）
+- （サービスページデザイン）
+
+- LPページとサービスページのデザインを実際のWebサービスに反映する。
+- **LPページは必ず `lp/index.html` として新規作成すること**（ディレクトリが存在しない場合は `mkdir lp` で作成）
+- サービスページは既存の / を更新。ユーザの利用動線を優先にしつつデザイン変更して。
+- コンテンツの目的に合わせて良いが、PCでもモバイルでも見れるように調整してほしい。
+- 全体のトップページのサービスページへのリンクは、LPページのURL（/lp/）に変更する
+- 今回の新デザイン（LPページのテーマカラーや素材・文字フォント・画像など）を該当既存サービスの全ページに刷新すること
+
+## ⚠️ 作業スコープ（必ず守ること）
+
+**読み込み・編集するファイルはこれだけ：**
+- `index.html`（サービスページ）
+- `lp/index.html`（LPページ・存在しない場合は新規作成）
+- 既存の `.css` ファイル（存在する場合のみ）
+
+**それ以外のファイル（contact.html, privacy-policy.html, terms.html, usage.html 等）は読まない・触らない。**
+ディレクトリ探索・ファイル一覧取得も不要。上記ファイルを直接編集すること。
+
+## ⚠️ 必須：実装完了後に必ず以下を実行すること（ローカルサーバーテストは不要）
+
+```bash
+git add -A
+git commit -m "Apply: design update with LP page"
+git push origin main
+```
+
+**git push origin main を実行してから完了とすること。push 完了のログを確認すること。**
+ローカルHTTPサーバーでのテストは不要。push が完了した時点で作業完了。
+
+## Claude Design プロジェクト
+
+
+Claude Design で生成されたコンポーネント（JSX・CSS）やプロトタイプの構成・スタイルを参考に実装すること。
+
+## デザイン参照画像（ローカル）
+- LP全体デザイン:      
+- サービスページデザイン: 
+- アイコン素材シート:   
+- 分割済みアイコン:    /Users/masayukitokunaga/workspace/30service/tax-bracket-calculator/assets/icons/split
+
+## 制約
+- GTM・GA4・AdSenseタグは変更しない
+- アフィリエイトリンクは変更しない
+- コアJSロジック（診断・計算ロジック）は変更しない
+
+## 対象プロジェクト
+297 所得税率・税額計算ツール tax-bracket-calculator https://appadaycreator.com/tax-bracket-calculator/
+/Users/masayukitokunaga/workspace/30service/tax-bracket-calculator/
+
+## ②デザイン改善要約（反映すること）
+SUMMARY_JSON:{"a":["賃貸退去・引越し専用診断モード追加（原状回復費用の目安も表示）","箇所別単体クリーニング費用対応（エアコン・浴室・キッチンなど部位単位の見積もり）","地域選択機能追加でローカル業者相場の精度向上"],"b":["結果画面に業者比較CTAボタン配置（アフィリエイト動線を診断結果と直結）","診断後に『もう一度診断』＋履歴比較パネルをサイドバイサイド表示","プライバシー安心バッジ（入力データ非送信）を診断開始前に明示してCV率向上"],"d":["ブラウザ完結・登録不要を前面訴求（競合は個人情報入力を要求するためプライバシー優位）","DIY vs プロ費用を並列比較表示（競合にない独自コンテンツでSEO差別化）","賃貸退去チェックリスト付きコンテンツブロック追加（退去清算キーワードで検索流入拡大）"],"seo_h1":"ハウスクリーニング費用診断【無料・登録不要】間取りと汚れ度で相場をすぐ確認","seo_meta":"部屋数・汚れ具合・入居状況を選ぶだけでハウスクリーニング費用相場を無料診断。賃貸退去・引越し清掃の費用目安も即わかる。登録不要でブラウザ完結。","forbidden":["GTM-TXQGZRF9","G-ZDPNYD2875","ca-pub-8427583028015858","gtag","calcScores","getResult","drawProgressBar","drawRadarChart","saveHistory","loadLastAnswers","loadHistory","drawCharts","startQuiz","renderQ","answer","copyResult","exportResult","printResult","saveBudget","showResult","loadHistoryResult"],"design_tokens":{"primary":"#0EA5E9","accent":"#F97316","font":"sans-serif","mood":"professional","cta":"無料で診断する"}}
+
+## ブランドカラー（必ずこの配色でCSSを実装すること）
+  - メインカラー: #0EA5E9（ボタン・見出し・強調要素に使用）
+  - アクセントカラー: #F97316（CTA・ハイライトに使用）
+  - フォント: sans-serif
+  - CTAボタン文言: 「無料で診断する」
+
+## 現在のindex.htmlの構成情報（事前読み込み済み・tool callでのファイル読み込み不要）
+<title>所得税率・税額計算ツール【無料】簡単・無料計算</title>
+<meta name="description" content="所得税率と税額を計算。課税所得・控除額を入力して、累進課税の計算方法と実効税率を表示。副業・フリーランスの節税計画や確定申告の事前シミュレーションに活用できる無料税率計算機。">
+<!-- GTM: GTM-TXQGZRF9 -->
+<!-- AdSense: ca-pub-8427583028015858 -->
+<!-- Affiliate A8: a8.net/svt/ejp?a8mat=4B3WJ6+FIIWRU+1IRY+1TKOKI -->
+<!-- JS functions: fmt, fmtWan, calcSalaryDeduction, calcSocialInsurance, calcIncomeTax, updateBar, calculate, autoCalculate, familyDed, familyDedResident, switchTab -->
+<h1>所得税率・税額計算ツール</h1>
